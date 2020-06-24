@@ -217,6 +217,7 @@ and for checking minikube IP use minikube ip command inside window cmd prompt
 OUTPUTS:
 
 
+![103](https://user-images.githubusercontent.com/64473684/85520732-ee36d100-b620-11ea-8ab8-f196568880f3.PNG)
 
 
 
