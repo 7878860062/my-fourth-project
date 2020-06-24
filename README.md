@@ -75,5 +75,25 @@ and then configure your cloud as I showed below:
 Jenkins->Manage Jenkins -> Manage nodes and clouds-> configure cloud-> add a new cloud-> docker
 ```
 
+![2](https://user-images.githubusercontent.com/64473684/85508622-10752280-b612-11ea-9097-9f08b9479820.PNG)
 
+In the Yellow section type your VM2 IP where your docker engine is running...
+
+And rest the column fill as I filled.
+
+POST-COMMIT file for triggering:
+```javascript
+#!/bin/bash
+
+echo "Auto Push Enabled"
+
+git push
+
+
+curl --user "admin:redhat" http://192.168.43.140:8080//job/Job1_image_build/build?token=devopss
+
+```
+GitHub Repo:
+
+JOB1:
 
