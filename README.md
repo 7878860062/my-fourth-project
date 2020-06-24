@@ -96,7 +96,7 @@ curl --user "admin:redhat" http://192.168.43.140:8080//job/Job1_image_build/buil
 GitHub Repo:
 
 JOB1:
-![2](https://user-images.githubusercontent.com/64473684/85510317-cc375180-b614-11ea-8aa2-7b67862b4541.PNG)
+![21](https://user-images.githubusercontent.com/64473684/85511707-a612b100-b616-11ea-8968-dbd445b0af67.PNG)
 ![16](https://user-images.githubusercontent.com/64473684/85510380-deb18b00-b614-11ea-9809-14df8e4c1520.PNG)
 ![15](https://user-images.githubusercontent.com/64473684/85510415-e96c2000-b614-11ea-9ef5-98985175f670.PNG)
 ![17](https://user-images.githubusercontent.com/64473684/85510429-effa9780-b614-11ea-81c8-4769f0e8925d.PNG)
