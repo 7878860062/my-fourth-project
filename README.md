@@ -96,4 +96,80 @@ curl --user "admin:redhat" http://192.168.43.140:8080//job/Job1_image_build/buil
 GitHub Repo:
 
 JOB1:
+![2](https://user-images.githubusercontent.com/64473684/85510317-cc375180-b614-11ea-8aa2-7b67862b4541.PNG)
+![16](https://user-images.githubusercontent.com/64473684/85510380-deb18b00-b614-11ea-9809-14df8e4c1520.PNG)
+![15](https://user-images.githubusercontent.com/64473684/85510415-e96c2000-b614-11ea-9ef5-98985175f670.PNG)
+![17](https://user-images.githubusercontent.com/64473684/85510429-effa9780-b614-11ea-81c8-4769f0e8925d.PNG)
+
+Note:
+
+1.In the Cloud column type, the name of the cloud is configured earlier.
+2. In Registry Credential column give your docker hub credential.
+3. Your image name always starts with your username.
+JOB2(Prerequisites):
+
+Before going to JOB2 we again need to perform some steps...
+
+Create a cloud... Create a Kubernetes cluster in VM2 which will help you to contact minikube.
+
+Creating a Kubernetes Image:
+
+Dockerfile:
+
+```javascript
+FROM centos
+RUN yum install java-11-openjdk.x86_64 -y
+RUN yum install openssh-server -y
+RUN yum install sudo -y
+RUN echo "root:redhat" | chpasswd
+RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+
+RUN chmod +x ./kubectl
+RUN mv ./kubectl /usr/local/bin/kubectl
+RUN mkdir /root/.kube
+COPY client.key /root/.kube
+COPY client.crt /root/.kube
+COPY ca.crt /root/.kube
+COPY config /root/.kube
+RUN mkdir /root/devops
+COPY deploy.yml /root/devops
+RUN ssh-keygen -A
+CMD ["/usr/sbin/sshd", "-D"]
+
+```
+For Running this file create a new directory<any_name>
+
+Inside this directory add your client.key, client.crt, ca.crt file
+
+I will get this file from  **"C:\Users\<account_name>\.minikube" and "C:\Users\<Account_name>\.minikube\profiles\minikube" **
+
+and then create a config file in this directory( Code attached below):
+
+```javascript
+apiVersion: v1
+kind: Config
+
+clusters:
+- cluster:
+    server: https:// 192.168.43.14:8443     #Add Your Minikube IP here
+    certificate-authority: ca.crt
+  name: chatpc
+
+contexts:
+- context:
+    cluster: chatpc
+    user: shrikant
+
+users:
+- name: shrikant
+  user:
+    client-key: client.key
+    client-certificate: client.crt
+
+```
+create a deploy.yml file(Same directory)
+
+
+
+
 
