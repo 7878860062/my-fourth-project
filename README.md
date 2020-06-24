@@ -169,6 +169,36 @@ users:
 ```
 create a deploy.yml file(Same directory)
 
+```javascript
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dev-deploy
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+        env: prod
+
+  template:
+    metadata:
+     name: dev-pod
+     labels:
+       env: prod
+    spec:
+     containers:
+      - name: dev-con
+        image: chatpc99/webui
+        ```
+        Now lastly, create a Kubernetes cluster image using dockerfile
+        
+        ```javascript
+        docker build -t kube:latest .
+```
+Now go and configure cloud for your JOB2
+
+
+
 
 
 
