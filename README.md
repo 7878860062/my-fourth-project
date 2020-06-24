@@ -1,8 +1,6 @@
 # my-fourth-project
 Whenever we are updating anything on our website we have always a fear of downtime(When our Website is not accessible by client).
 
-So today my article is based on how to we can update our website with ZERO DOWNTIME.....
-
 This task is given by VIMAL DAGA in DevOps Assembly Line training.
 
 Task Overview:
