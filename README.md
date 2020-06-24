@@ -57,18 +57,21 @@ and then reload and restart your docker services
 
 ```javascript
 systemctl daemon-reload
-systemctl restart docker ```
+systemctl restart docker
+```
 
 Now go to your VM1 and start your Jenkins service and install the "docker" plugin
 
 ```javascript
-systemctl start jenkins ```
+systemctl start jenkins 
+```
 
 
 and then configure your cloud as I showed below:
 
 ```javascript
-Jenkins->Manage Jenkins -> Manage nodes and clouds-> configure cloud-> add a new cloud-> docker ```
+Jenkins->Manage Jenkins -> Manage nodes and clouds-> configure cloud-> add a new cloud-> docker
+```
 
 
 
