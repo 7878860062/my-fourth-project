@@ -66,6 +66,8 @@ Now go to your VM1 and start your Jenkins service and install the "docker" plugi
 systemctl start jenkins 
 ```
 
+![13](https://user-images.githubusercontent.com/64473684/85508296-67c6c300-b611-11ea-8228-b4c155e1fd07.png)
+
 
 and then configure your cloud as I showed below:
 
