@@ -196,6 +196,25 @@ spec:
         docker build -t kube:latest .
 ```
 Now go and configure cloud for your JOB2
+![61](https://user-images.githubusercontent.com/64473684/85514618-db6cce00-b619-11ea-971b-5f90434c525d.PNG)
+![62](https://user-images.githubusercontent.com/64473684/85514630-de67be80-b619-11ea-8416-965ef7e6fd78.PNG)
+JOB2:
+![63](https://user-images.githubusercontent.com/64473684/85514645-e162af00-b619-11ea-8c69-a25789323e3a.PNG)
+![65](https://user-images.githubusercontent.com/64473684/85514654-e3c50900-b619-11ea-86ec-69d7e28e2991.PNG)
+
+That's It...
+
+Now come to the testing phase.
+
+Just go and commit from directory everything will be automated just from one commit...
+
+You will access your website from a browser using minikube_ip:<port>
+
+I print the whole Kubernetes details so you can see the port from there...
+
+and for checking minikube IP use minikube ip command inside window cmd prompt
+
+OUTPUTS:
 
 
 
