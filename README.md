@@ -50,3 +50,23 @@ Before proceeding to do this step in your VM2:
 Open /usr/lib/systemd/system/docker.service file and add -H tcp://0.0.0.0:3456
 (This command will help you to access the docker service of this VM from another machine[this process is called socket binding]).
 
+
+and then reload and restart your docker services
+
+```javascript
+systemctl daemon-reload
+systemctl restart docker
+
+Now go to your VM1 and start your Jenkins service and install the "docker" plugin
+
+```javascript
+systemctl start jenkins
+
+
+and then configure your cloud as I showed below:
+
+```javascript
+Jenkins->Manage Jenkins -> Manage nodes and clouds-> configure cloud-> add a new cloud-> docker
+
+
+
